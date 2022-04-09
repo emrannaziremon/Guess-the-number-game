@@ -20,7 +20,7 @@ document.querySelector('.number').textContent = secrectNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
 //   let theMessage = document.querySelector('.message').textContent;
-  const guess = Number(document.querySelector('.guess').value);
+  let guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
   //When there have not a input
@@ -32,7 +32,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Currect Number';
     document.querySelector('.guess-h').textContent = 'Ohh you guessed my number!'
     document.querySelector('body').style.backgroundColor = '#019267';
-    document.querySelector('.number').style.width = '30rem'
+    document.querySelector('.number').style.width = '30rem';
   } 
   //When the number is High
   else if (guess < secrectNumber) {
@@ -61,3 +61,11 @@ document.querySelector('.check').addEventListener('click', function () {
     
   }
 });
+
+
+document.querySelector('.again').addEventListener('click', function() {
+    document.querySelector('.score').textContent = 20;
+    document.querySelector('body').style.backgroundColor = '#333';
+    document.querySelector('.number').style.width = '30rem';
+    guess = Number(document.querySelector('.guess').value = ' ');
+})
