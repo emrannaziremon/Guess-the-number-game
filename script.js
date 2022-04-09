@@ -16,6 +16,7 @@ console.log(getTheMessage);
 let secrectNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 console.log(secrectNumber);
+let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
   //   let theMessage = document.querySelector('.message').textContent;
@@ -34,6 +35,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#019267';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secrectNumber;
+    
+    
+    if(score > highscore){
+      highscore = score;
+     document.querySelector('.highscore').textContent = highscore;
+    }
   }
   //When the number is High
   else if (guess < secrectNumber) {
