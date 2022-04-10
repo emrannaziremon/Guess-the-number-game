@@ -21,7 +21,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guess) {
     displayMessage('No Number Added Yet😒');
-
   } else if (guess === secretNumber) {
     displayMessage('Correct Number😃');
     getNumber.textContent = secretNumber;
@@ -45,7 +44,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-document.querySelector('.again').addEventListener('click', function() {
+document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20 + 1);
 
@@ -56,4 +55,4 @@ document.querySelector('.again').addEventListener('click', function() {
 
   getBody.style.backgroundColor = '#333';
   getNumber.style.width = '10rem';
-})
+});
